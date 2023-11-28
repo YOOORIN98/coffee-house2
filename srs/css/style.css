@@ -1,0 +1,409 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/inter-v13-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/inter-v13-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+    background-color: #E1D4C9;
+}
+
+
+body{
+    font-family: 'inter';
+    font-size: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #2D2D2D;
+}
+
+.wrapper{
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.wrapper-full {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%
+}
+
+/* header styles start */
+
+.header_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.header_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header_item {
+    margin-right: 40px;
+}
+.header_item:last-child {
+    margin-right: 0;
+}
+
+.header_link {
+    font-size: 18px;
+    line-height: 28px;
+    color: black;
+    text-decoration: none;
+}
+.header_link:hover, .header_link:focus, .header_link:active{
+    opacity: .75;
+}
+
+/* header styles end */
+
+/* intro styles start */
+.enjoy{
+    min-height: 100vh;
+    background: url(../img/img-hero.jpg) no-repeat center ;
+    border-radius: 5vh;
+    margin: 40px;
+    margin-top: 20px;
+    padding: 100px;
+    margin-bottom: 100px;
+}
+
+.intro_title {
+    font-size: 72px;
+    font-weight: 600;
+    background-color: dimgray;
+    color: #E1D4C9;
+    max-width: 530px;
+    line-height: 105%;
+    margin-bottom: 40px;
+
+}
+.accent {
+    color: #B0907A;
+    font-style: italic
+}
+
+.intro_subtitle {
+    color:  #E1D4C9;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    background-color: dimgray;
+    max-width: 530px;
+    margin-bottom: 40px;
+}
+
+.menu_botton {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 40px;
+    background: url(../icons/State=default.png) no-repeat center;
+    padding-right: 200px;
+    border-radius: 5vh
+}
+
+/* intro styles end */
+
+/* fav coffee start */
+.favourites-coffee {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.slider {
+    width: 480px;
+    height: 480px;
+    overflow: hidden;
+    border: 10px solid #fff;
+}
+.middle {
+    position: relative;
+    margin-top: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navigation {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar {
+    height: 8px;
+    width: 30px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: .5;
+    border-radius: 10px;
+    transition: all .4s ease;
+
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+
+}
+.input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+.slides {
+    width: 300%;
+    height: 100%;
+    display: flexbox;
+}
+
+.slide {
+    width: 33,3%;
+    transition: all .6s ease;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -33,3;
+}
+#r3:checked ~ .s1 {
+    margin-left: -66,6;
+}
+/* fav coffee end */
+
+/* about start*/
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1360px;
+    max-height: 1325px;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 350px;
+}
+.about_container {
+    height: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cozy_place_text {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    align-self: stretch;
+    text-align: justify;
+}
+.about_img {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 646px;
+}
+.about_img img{
+    width: 646px;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+
+/* about end*/
+
+/*mobile app start*/
+
+.wrapper_mobile_app {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+
+}
+.offer {
+    flex: 1;
+    max-width: 630px;
+
+}
+.mobile-screens {
+    flex: 1;
+    max-width: 630px;
+}
+.mobile-screens img {
+    width: 100%;
+}
+
+.download {
+    font-family: inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    font-weight: normal;
+    }
+.download_text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
+.mobile_app_buttons {
+     margin-bottom: 40px;
+}
+
+.app-store {
+    width: 160px;
+    height: 40px;
+    border-radius:20%;
+    margin-right: 20;
+}
+
+
+.google-play {
+    width: 160px;
+    height: 40px;
+    border-radius:20%
+}
+.available {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+.app_store {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+.google_play {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+
+/*mobile app end*/
+
+/*contact us start*/
+
+
+.wrapper-contact-us {
+    max-width: 1360px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-left h2 {
+    margin-bottom: 40px;
+}
+.contact-right {
+    text-align: right;
+}
+
+
+.first-contact-us {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%; 
+    width: 530px;
+}
+
+.contact-us-content{
+    margin-bottom: 40px;
+}
+
+/*contact us end*/
